@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.research.flowmoney.ui.home.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentInputData"
+            app:destination="@id/fragmentInputData" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInputData"
+        android:name="com.research.flowmoney.ui.inputData.FragmentInputData"
+        android:label="fragment_input_data"
+        tools:layout="@layout/fragment_input_data" />
+</navigation>

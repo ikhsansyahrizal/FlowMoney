@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.FragmentHome">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="411dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center"
+            android:layout_margin="16dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg_rounded_icon"
+            android:contentDescription="Settings"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_settings_24"
+            tools:ignore="TouchTargetSizeCheck" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_weight="0.35"/>
+
+
+        <ImageButton
+            android:id="@+id/img_notification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center"
+            android:layout_margin="16dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg_rounded_icon"
+            android:contentDescription="Notification"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_notification"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layout_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="Balance"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:text="Rp. 4.000.000"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="411dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_balance">
+
+
+        <ImageButton
+            android:id="@+id/img_saving"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_rounded_icon"
+            android:contentDescription="Savings"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic__savings_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recent_activites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Recent Activites"
+        app:layout_constraintStart_toStartOf="@+id/layout_menu"
+        app:layout_constraintTop_toBottomOf="@+id/layout_menu" />
+
+    <TextView
+        android:id="@+id/tv_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See All"
+        app:layout_constraintEnd_toEndOf="@+id/layout_menu"
+        app:layout_constraintTop_toTopOf="@+id/tv_recent_activites" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="@+id/tv_see_all"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_recent_activites"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recent_activites"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemRippleColor="@null"
+        app:menu="@menu/bottom_nav"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

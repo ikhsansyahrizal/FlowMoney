@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1025462047442",
+    "project_id": "money-flow-48331",
+    "storage_bucket": "money-flow-48331.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025462047442:android:231f0fd8a2ed44dc83530b",
+        "android_client_info": {
+          "package_name": "com.research.flowmoney"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLpQLFfkHSREXUJXH78GASG8fUs0e_2CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
